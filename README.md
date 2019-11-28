@@ -9,7 +9,7 @@ oliver thurley, november 2019
 * GIMP
 * python scripts:
   * thrly-1-png2xcf.py
-  * thrly-1-xcf2pdf.py
+  * thrly-2-xcf2pdf.py
   	* (both need to be loaded into GIMP plug-ins folder. 
 		* OS X: `Applications/GIMP-2.10.app/Contents/Resources/lib/gimp/2.0/plug-ins/`
 		* Windows: `Program Files\GIMP 2\lib\gimp\2.0\plug-ins\`
