@@ -9,8 +9,10 @@ oliver thurley, november 2019
 * GIMP
 * python scripts:
   * thrly-1-png2xcf.py
-	*	thrly-1-xcf2pdf.py
-	  *	(both need to be loaded into GIMP plug-ins folder. OS X: `Applications/GIMP-2.10.app/Contents/Resources/lib/gimp/2.0/plug-ins/`
+  * thrly-1-xcf2pdf.py
+  	* (both need to be loaded into GIMP plug-ins folder. 
+		* OS X: `Applications/GIMP-2.10.app/Contents/Resources/lib/gimp/2.0/plug-ins/`
+		* Windows: `Program Files\GIMP 2\lib\gimp\2.0\plug-ins\`
 
 ## Steps
 * Split raw-scan PDF into separate PNG files with ImageMagick and gs:
@@ -24,10 +26,11 @@ oliver thurley, november 2019
     ```gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -dAutoRotatePages=/None -dAutoFilterColorImages=false -dAutoFilterGrayImages=false -dColorImageFilter=/FlateEncode -dGrayImageFilter=/FlateEncode -dDownsampleMonoImages=false -dDownsampleGrayImages=false -sOutputFile=finalEditedPages-Merged.pdf *.pdf```
 
 ## NOTES:
-* ensure the python scripts are correctly loaded into the GIMP filepath. [/Applications/GIMP-2.10.app/Contents/Resources/lib/gimp/2.0/plug-ins/]
-* sometimes, new python scrips need to have their permissions updated to make it executable: chmod +x <filepath>
+* ensure the python scripts are correctly loaded into the GIMP filepath
+* sometimes new python scrips need to have their permissions updated to make it executable: `chmod +x <filepath>`
 
-*ALTERNATIVE:* use ImageMagick to convert from XCF to PDF: `convert *.xcf %02d-edited-xcf.pdf` (the file will be massive?)
+### ALTERNATIVE:
+use ImageMagick to convert from XCF to PDF: `convert *.xcf %02d-edited-xcf.pdf` (the file will be massive?)
 
 
 oliverthurley.co.uk
